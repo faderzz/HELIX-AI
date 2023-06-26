@@ -1,6 +1,7 @@
 import gpt4all
 
 # Setup GPT4ALL
-gptj = gpt4all.GPT4All("ggml-gpt4all-j-v1.3-groovy")
-# Download model to data/models folder
-gptj.download_model()
+gptj = gpt4all.GPT4All
+
+# Retrieve the model in data/models
+gptj.retrieve_model("GPT4All-13B-snoozy.ggmlv3.q4_0", "data/models")
