@@ -113,6 +113,11 @@ inputmessage {
 
 #settings {
   position: relative;
+  margin-top: 20px;
+}
+
+#settings:hover {
+  cursor: pointer;
 }
 
 .popup {
@@ -165,3 +170,16 @@ inputmessage {
     border-color: #fff;
   }
 }
+
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+      background-color: white;
+}
+
+.widget1 { grid-area: 1 / 1 / 2 / 2; background-color: white; width: 50px; height: 50px;}
+.widget2 { grid-area: 1 / 2 / 2 / 3; background-color: white; width: 50px; height: 50px;}
+.widget3 { grid-area: 1 / 3 / 2 / 4; background-color: white; width: 50px; height: 50px;}
+.widget4 { grid-area: 1 / 4 / 2 / 5; background-color: white; width: 50px; height: 50px;}

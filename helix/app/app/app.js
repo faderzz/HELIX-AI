@@ -95,6 +95,14 @@ export default function App() {
         <div class="flex flex-col items-center justify-center" id="settings">
           <img src="https://api.iconify.design/mdi:cog.svg?color=white" alt="settings" onClick={handleSettingsClick}/>
         </div>
+
+      </div>
+
+      <div class="widgets">
+          <div class="widget1"></div>
+          <div class="widget2"></div>
+          <div class="widget3"></div>
+          <div class="widget4"></div>
       </div>
 
       {/* Popup */}
