@@ -2,7 +2,7 @@ import requests
 import json
 import time
 
-lastTimeContext = 0
+# lastTimeContext = 0
 
 # def getContext():
 #     # Get unix time
