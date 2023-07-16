@@ -1,4 +1,20 @@
 import Image from 'next/image'
+const axios = require('axios');
+
+async function prompt(text, user_id) {
+  const response = await axios.post('https://api.carterlabs.ai/chat', {
+    text,
+    key: '457771a6-17e8-4ae7-873e-6d46b42c31fe',
+    user_id,
+    speak: false,
+  }, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  return response.data.response;
+}
 
 export default function Home() {
   return (
@@ -20,18 +36,22 @@ export default function Home() {
         <p class="text-xl">Helpful Electronic Language Interface X</p>
       </div>
 
-      <div class="flex flex-col items-center justify-center">
-        <div id="glow"></div>
-      </div>
+      <div class="main">
+        <div>
+          <div id="glow">
+            <div id="text"></div>
+          </div>
+        </div>
 
-      {/* Input box */}
-      <div class="flex flex-col items-center justify-center">
-        <input type="text" id="input" placeholder="Enter your message..." />
-      </div>
+        {/* Input box */}
+        <div id="inputmessage">
+          <input type="text" id="input" placeholder="Enter your message..." />
+        </div>
 
-      {/* Settings cog wheel icon */}
-      <div class="flex flex-col items-center justify-center" id="settings">
-        <img src="https://api.iconify.design/mdi:cog.svg?color=white" alt="settings"/>
+        {/* Settings cog wheel icon */}
+        <div class="flex flex-col items-center justify-center" id="settings">
+          <img src="https://api.iconify.design/mdi:cog.svg?color=white" alt="settings"/>
+        </div>
       </div>
     </main>
   )

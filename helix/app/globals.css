@@ -76,8 +76,48 @@ html {
   width: 300px;
   height: 300px;
   border-radius: 100%;
+  box-shadow: 0 0 60px 30px #fff;
   border: 5px solid #fff;
-  animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Text input rounded modern */
+input[type="text"] {
+  padding: 12px 20px;
+  margin: 0 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+inputmessage {
+  /* Position 60px from bottom */
+  bottom: 100px;
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+#settings {
+  /* Position 60px from bottom */
+  bottom: 100px;
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
 }
 
 @keyframes glow {
@@ -93,16 +133,4 @@ html {
     box-shadow: 0 0 20px 10px #fff;
     border-color: #fff;
   }
-}
-
-/* Text input rounded modern */
-input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  font-size: 16px;
 }
