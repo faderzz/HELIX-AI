@@ -112,11 +112,47 @@ inputmessage {
 }
 
 #settings {
-  /* Position 60px from bottom */
-  bottom: 100px;
-  width: 100%;
-  padding: 12px 20px;
-  box-sizing: border-box;
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+.tooltip form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip label {
+  margin-bottom: 5px;
+}
+
+.tooltip input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tooltip button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tooltip button:hover {
+  background-color: #3e8e41;
 }
 
 @keyframes glow {
