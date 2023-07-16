@@ -39,7 +39,7 @@ export default function Home() {
       <div class="main">
         <div>
           <div id="glow">
-            <div id="text"></div>
+            <div id="text">Enter a message to start.</div>
           </div>
         </div>
 
