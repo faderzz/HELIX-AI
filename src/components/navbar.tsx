@@ -35,7 +35,7 @@ function Navbar() {
           // Navbar, dont use menubar
           <Button
             className="bg-white py-2 font-bold text-black no-underline transition hover:bg-white/80"
-            // onClick={() => void signOut()}
+            onClick={() => window.open("/helix", "_self")}
           >
             Open App
           </Button>
