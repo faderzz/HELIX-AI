@@ -24,29 +24,17 @@ return (
                         <CardHeader className="flex flex-col items-center mx-12">
                             <Avatar className="w-20 h-20 border-black">
                                 <AvatarImage src={user?.image} />
-                                <AvatarFallback>{user?.name[0] + user?.name[1]}</AvatarFallback>
+                                <AvatarFallback>{(user?.name)}</AvatarFallback>
                             </Avatar>
                             <div className="text-center pt-3">
                                 <h3 className="text-lg font-bold">{user?.name}</h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 pb-1">User ID: {user?.accountNumber}</p>
-                                {/* Rank tag */}
-                                <Badge className="bg-green-400">3</Badge>
                             </div>
                             <div className="grid gap-2 items-center justify-center py-1">
                                 <span>
-                                    <img src="https://i.imgur.com/kob4lzm.png" width={150} alt="signature" />
+                                    Plan: {user?.subscriptionType}
                                 </span>
                             </div>
                         </CardHeader>
-                    </div>
-                    <div className="flex-1 bg-gray-100 border-l-gray-200 border-l-2 rounded-sm">
-                        {/* Example signature */}
-                        <CardHeader className="flex items-center">
-                            <h3 className="text-lg font-bold">About</h3>
-                        </CardHeader>
-                        <CardContent>
-                            <img src="https://media.discordapp.net/attachments/1057657012097392640/1058235878180405368/Me_When.gif?ex=6618b476&is=66063f76&hm=af19ae459723ee148e3ffde3b0c43188549cf2a58499a8943bd7fd6731fee8a8&" width={200} alt="signature" />
-                        </CardContent>
                     </div>
                 </div>
             </Card>
